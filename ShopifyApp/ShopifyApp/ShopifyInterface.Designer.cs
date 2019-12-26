@@ -1,6 +1,6 @@
 ﻿namespace ShopifyApp
 {
-    partial class Form1
+    partial class ShopifyInterface
     {
         /// <summary>
         /// Required designer variable.

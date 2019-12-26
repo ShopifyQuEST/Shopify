@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopifyApp
+namespace ShopifyBLL.ShopifyBL
 {
-    class AkshayTestClass1
+    class ShopifyItemsBLL
     {
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ShopifyApp
 {
-    public partial class Form1 : Form
+    public partial class ShopifyInterface : Form
     {
-        public Form1()
+        public ShopifyInterface()
         {
             InitializeComponent();
         }
