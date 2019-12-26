@@ -8,5 +8,6 @@ namespace ShopifyDSL
 {
     public class Class1
     {
+        
     }
 }
