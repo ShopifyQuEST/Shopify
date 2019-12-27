@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace ShopifyApp
 {
-    public partial class LoginForm : Form
+    public partial class SupplierDetailsForm : Form
     {
-        public LoginForm()
+        public SupplierDetailsForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            StoreDetailsPage storeDetailsPage = new StoreDetailsPage();
-            storeDetailsPage.ShowDialog();
         }
     }
 }

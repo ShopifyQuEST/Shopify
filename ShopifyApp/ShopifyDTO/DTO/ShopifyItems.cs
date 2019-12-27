@@ -6,7 +6,55 @@ using System.Threading.Tasks;
 
 namespace ShopifyDTO.DTO
 {
-    class ShopifyItems
+   public  class ShopifyItems
     {
+        private string productid;
+        public String Productid
+        {
+            get { return productid; }
+            set
+            {
+                productid = value;
+            }
+        }
+        private string productname;
+        public String Productname
+        {
+            get { return productname; }
+            set
+            {
+                productname = value;
+            }
+        }
+        private string unitprice;
+        public String Unitprice
+        {
+            get { return unitprice; }
+            set
+            {
+                unitprice = value;
+            }
+        }
+        private string quantity;
+        public String Quantity
+        {
+            get { return quantity; }
+            set
+            {
+                quantity = value;
+            }
+        }
+        private string supplierid;
+        public String Supplierid
+        {
+            get { return supplierid; }
+            set
+            {
+                supplierid = value;
+            }
+        }
+
+
+
     }
 }
