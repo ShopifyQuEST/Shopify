@@ -94,12 +94,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="StoreDetailsPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StoreDetailsPage.Designer.cs">
-      <DependentUpon>StoreDetailsPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,9 +116,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StoreDetailsPage.resx">
-      <DependentUpon>StoreDetailsPage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,7 +142,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopifyBLL\ShopifyBLL.csproj">
