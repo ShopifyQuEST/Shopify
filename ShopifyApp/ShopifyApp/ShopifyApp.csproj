@@ -74,15 +74,55 @@
     <Compile Include="EstablishConn1.Designer.cs">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GokulTestClass1.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopifyInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopifyInterface.Designer.cs">
+      <DependentUpon>ShopifyInterface.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockDetailsNExtform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockDetailsNExtform.Designer.cs">
+      <DependentUpon>StockDetailsNExtform.cs</DependentUpon>
+    </Compile>
     <Compile Include="StockItemsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StoreDetailsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreDetailsPage.Designer.cs">
+      <DependentUpon>StoreDetailsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierDetailsForm.Designer.cs">
+      <DependentUpon>SupplierDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EstablishConn1.resx">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +134,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StockDetailsNExtform.resx">
+      <DependentUpon>StockDetailsNExtform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreDetailsPage.resx">
+      <DependentUpon>StoreDetailsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,9 +166,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopifyBLL\ShopifyBLL.csproj">
