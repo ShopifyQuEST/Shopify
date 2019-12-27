@@ -26,8 +26,8 @@ namespace ShopifyDTO.DTO
                 productname = value;
             }
         }
-        private string unitprice;
-        public String Unitprice
+        private double unitprice;
+        public double Unitprice
         {
             get { return unitprice; }
             set
@@ -35,8 +35,8 @@ namespace ShopifyDTO.DTO
                 unitprice = value;
             }
         }
-        private string quantity;
-        public String Quantity
+        private double quantity;
+        public double Quantity
         {
             get { return quantity; }
             set
