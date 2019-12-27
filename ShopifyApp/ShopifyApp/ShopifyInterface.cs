@@ -16,5 +16,10 @@ namespace ShopifyApp
         {
             InitializeComponent();
         }
+
+        private void ShopifyInterface_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
