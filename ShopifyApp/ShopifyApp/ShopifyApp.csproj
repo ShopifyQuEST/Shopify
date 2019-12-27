@@ -82,28 +82,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StockDetailsNExtform.cs">
+    <Compile Include="Stock Managment\ManageStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockDetailsNExtform.Designer.cs">
-      <DependentUpon>StockDetailsNExtform.cs</DependentUpon>
+    <Compile Include="Stock Managment\ManageStock.Designer.cs">
+      <DependentUpon>ManageStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock Managment\Stock Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock Managment\Stock Manager.Designer.cs">
+      <DependentUpon>Stock Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock Managment\ViewStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock Managment\ViewStock.Designer.cs">
+      <DependentUpon>ViewStock.cs</DependentUpon>
     </Compile>
     <Compile Include="StockItemsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StoreDetailsPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StoreDetailsPage.Designer.cs">
-      <DependentUpon>StoreDetailsPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SupplierDetailsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SupplierDetailsForm.Designer.cs">
-      <DependentUpon>SupplierDetailsForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="EstablishConn1.resx">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
@@ -121,11 +121,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StockDetailsNExtform.resx">
-      <DependentUpon>StockDetailsNExtform.cs</DependentUpon>
+    <EmbeddedResource Include="Stock Managment\ManageStock.resx">
+      <DependentUpon>ManageStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StoreDetailsPage.resx">
-      <DependentUpon>StoreDetailsPage.cs</DependentUpon>
+    <EmbeddedResource Include="Stock Managment\Stock Manager.resx">
+      <DependentUpon>Stock Manager.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

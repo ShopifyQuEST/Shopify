@@ -1,6 +1,6 @@
-﻿namespace ShopifyApp
+﻿namespace ShopifyApp.Stock_Managment
 {
-    partial class StoreDetailsPage
+    partial class Stock_Manager
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.stockDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.mangingStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewStockDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageStockDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewSupplier = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageSupplier = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // menuStrip1
             // 
@@ -52,64 +45,66 @@
             this.supplierDetailsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1119, 24);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // stockDetailsToolStripMenuItem
             // 
             this.stockDetailsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.mangingStockToolStripMenuItem});
+            this.viewStockDetails,
+            this.manageStockDetails});
             this.stockDetailsToolStripMenuItem.Name = "stockDetailsToolStripMenuItem";
             this.stockDetailsToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.stockDetailsToolStripMenuItem.Text = "Stock Details";
-            this.stockDetailsToolStripMenuItem.Click += new System.EventHandler(this.stockDetailsToolStripMenuItem_Click_1);
+            this.stockDetailsToolStripMenuItem.Click += new System.EventHandler(this.stockDetailsToolStripMenuItem_Click);
             // 
             // supplierDetailsToolStripMenuItem
             // 
             this.supplierDetailsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.manageToolStripMenuItem});
+            this.viewSupplier,
+            this.manageSupplier});
             this.supplierDetailsToolStripMenuItem.Name = "supplierDetailsToolStripMenuItem";
             this.supplierDetailsToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.supplierDetailsToolStripMenuItem.Text = "Supplier Details";
-            this.supplierDetailsToolStripMenuItem.Click += new System.EventHandler(this.supplierDetailsToolStripMenuItem_Click_1);
             // 
-            // toolStripMenuItem1
+            // viewStockDetails
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem1.Text = "View Stock";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.viewStockDetails.Name = "viewStockDetails";
+            this.viewStockDetails.Size = new System.Drawing.Size(180, 22);
+            this.viewStockDetails.Text = "View";
+            this.viewStockDetails.Click += new System.EventHandler(this.viewStockDetails_Click);
             // 
-            // mangingStockToolStripMenuItem
+            // manageStockDetails
             // 
-            this.mangingStockToolStripMenuItem.Name = "mangingStockToolStripMenuItem";
-            this.mangingStockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mangingStockToolStripMenuItem.Text = "Manging Stock";
+            this.manageStockDetails.Name = "manageStockDetails";
+            this.manageStockDetails.Size = new System.Drawing.Size(180, 22);
+            this.manageStockDetails.Text = "Manage Stock";
+            this.manageStockDetails.Click += new System.EventHandler(this.manageStockDetails_Click);
             // 
-            // viewToolStripMenuItem
+            // viewSupplier
             // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.viewToolStripMenuItem.Text = "View";
+            this.viewSupplier.Name = "viewSupplier";
+            this.viewSupplier.Size = new System.Drawing.Size(180, 22);
+            this.viewSupplier.Text = "View";
             // 
-            // manageToolStripMenuItem
+            // manageSupplier
             // 
-            this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.manageToolStripMenuItem.Text = "Manage Details";
+            this.manageSupplier.Name = "manageSupplier";
+            this.manageSupplier.Size = new System.Drawing.Size(180, 22);
+            this.manageSupplier.Text = "Manage ";
             // 
-            // StoreDetailsPage
+            // Stock_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 651);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "StoreDetailsPage";
-            this.Text = "StoreDetailsPage";
-            this.Load += new System.EventHandler(this.StoreDetailsPage_Load);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "Stock_Manager";
+            this.Text = "Stock_Manager";
+            this.Load += new System.EventHandler(this.Stock_Manager_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -118,13 +113,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem stockDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewStockDetails;
+        private System.Windows.Forms.ToolStripMenuItem manageStockDetails;
         private System.Windows.Forms.ToolStripMenuItem supplierDetailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem mangingStockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewSupplier;
+        private System.Windows.Forms.ToolStripMenuItem manageSupplier;
     }
 }
