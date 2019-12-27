@@ -68,19 +68,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs" />
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GokulTestClass1.cs" />
-    <Compile Include="LoginForm.cs" />
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ShopifyInterface.cs" />
-    <Compile Include="ShopifyInterface.Designer.cs">
-      <DependentUpon>ShopifyInterface.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StockItemsDataSet.Designer.cs">
@@ -88,16 +75,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeForm.cs" />
-    <Compile Include="WelcomeForm.Designer.cs">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -108,12 +85,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ShopifyInterface.resx">
-      <DependentUpon>ShopifyInterface.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeForm.resx">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shopping-supermarket-merchandising-store.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Authentication\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
