@@ -81,9 +81,7 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShopifyInterface.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ShopifyInterface.cs" />
     <Compile Include="ShopifyInterface.Designer.cs">
       <DependentUpon>ShopifyInterface.cs</DependentUpon>
     </Compile>
@@ -112,9 +110,7 @@
     <Compile Include="SupplierDetailsForm.Designer.cs">
       <DependentUpon>SupplierDetailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="WelcomeForm.cs" />
     <Compile Include="WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
