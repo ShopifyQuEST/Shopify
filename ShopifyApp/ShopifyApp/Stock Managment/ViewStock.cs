@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopifyApp
+namespace ShopifyApp.Stock_Managment
 {
-    public partial class SupplierDetailsForm : Form
+    public partial class ViewStock : Form
     {
-        public SupplierDetailsForm()
+        public ViewStock()
         {
             InitializeComponent();
         }

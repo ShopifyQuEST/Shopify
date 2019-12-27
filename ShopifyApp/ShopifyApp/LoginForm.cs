@@ -20,8 +20,7 @@ namespace ShopifyApp
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StoreDetailsPage storeDetailsPage = new StoreDetailsPage();
-            storeDetailsPage.ShowDialog();
+           
         }
     }
 }

@@ -48,6 +48,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "EstablishConn1";
             this.Text = "EstablishConn1";
+            this.Load += new System.EventHandler(this.EstablishConn1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
