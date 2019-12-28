@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
 namespace ShopifyDSL.Helper
+
 {
     class DBHelper
     {
@@ -17,7 +19,7 @@ namespace ShopifyDSL.Helper
             try
             {
 
-                String connectionstring = ConfigurationManager.ConnectionStrings["ShopifyApp.Properties.Settings.StockItemsConnectionString"].ConnectionString;
+                String connectionstring = ConfigurationManager.ConnectionStrings["ShopifyApp.Properties.Settings.StockItemsConnectionString1"].ConnectionString;
 
                 con = new SqlConnection(connectionstring); //connection with db
             }

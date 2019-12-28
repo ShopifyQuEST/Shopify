@@ -48,9 +48,9 @@ namespace ShopifyApp.Stock_Managment
                 shopifyItems = new ShopifyItems();
                 shopifyItems.Productid = txtProductID.Text;
                 shopifyItems.Productname =txtProductName.Text;
-                shopifyItems.Unitprice =Convert.ToInt64(txtUnitPrice.Text);
-                shopifyItems.Quantity = Convert.ToInt64(txtQuality.Text);
-                shopifyItems.Supplierid = cmbSupplierID.Text;
+                //shopifyItems.Unitprice =Convert.ToInt64(txtUnitPrice.Text);
+                //shopifyItems.Quantity = Convert.ToInt64(txtQuality.Text);
+                //shopifyItems.Supplierid = cmbSupplierID.Text;
                 output = ShopifyItemsBLL.StockInsert(shopifyItems);
                 if (output > 0)
 

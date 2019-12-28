@@ -23,14 +23,14 @@ namespace ShopifyDSL.DL
 
             try
             {
-                sql = " insert into  StockDetails(ProductID,ProductName,UnitPrice,Quantity) VALUES (";
+                sql = " insert into  StockDetails(ProductID,ProductName) VALUES (";
                 sql = sql + "'" + shopifyItems.Productid + "',";
-                sql = sql + "'" + shopifyItems.Productname + "',";
+                sql = sql + "'" + shopifyItems.Productname + "')";
 
-                sql = sql + "" + shopifyItems.Unitprice + ",";
-                //sql = sql + "'" + shopifyItems.Quantity + "',";
+               // sql = sql + "" + shopifyItems.Unitprice + ",";
+               //// sql = sql + "'" + shopifyItems.Quantity + "',";
 
-                sql = sql +" " + shopifyItems.Quantity + ")";
+               //sql = sql +" " + shopifyItems.Quantity + ")";
 
                 //sql = sql + "'" + addressBook.Email + "')";
                 //sql = sql + "'" + studentMARK.Result + "')";
