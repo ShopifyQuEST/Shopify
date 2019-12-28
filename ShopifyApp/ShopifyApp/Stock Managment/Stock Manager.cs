@@ -42,5 +42,12 @@ namespace ShopifyApp.Stock_Managment
             manageStock.MdiParent = this;
 
         }
+
+
+
+
+
+
+
     }
 }
