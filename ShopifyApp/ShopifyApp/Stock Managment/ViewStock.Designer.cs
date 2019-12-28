@@ -28,33 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.dgvView = new System.Windows.Forms.DataGridView();
+            this.stockItemsDataSet2 = new ShopifyApp.StockItemsDataSet2();
+            this.stockDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stockDetailsTableAdapter = new ShopifyApp.StockItemsDataSet2TableAdapters.StockDetailsTableAdapter();
+            this.lblMessage = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockItemsDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(207, 146);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvView.Location = new System.Drawing.Point(12, 28);
+            this.dgvView.Name = "dgvView";
+            this.dgvView.Size = new System.Drawing.Size(776, 410);
+            this.dgvView.TabIndex = 0;
+            this.dgvView.SelectionChanged += new System.EventHandler(this.dgvView_SelectionChanged);
+            // 
+            // stockItemsDataSet2
+            // 
+            this.stockItemsDataSet2.DataSetName = "StockItemsDataSet2";
+            this.stockItemsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stockDetailsBindingSource
+            // 
+            this.stockDetailsBindingSource.DataMember = "StockDetails";
+            this.stockDetailsBindingSource.DataSource = this.stockItemsDataSet2;
+            // 
+            // stockDetailsTableAdapter
+            // 
+            this.stockDetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(59, 28);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 2;
             // 
             // ViewStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.dgvView);
             this.Name = "ViewStock";
             this.Text = "ViewStock";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ViewStock_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockItemsDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvView;
+        private StockItemsDataSet2 stockItemsDataSet2;
+        private System.Windows.Forms.BindingSource stockDetailsBindingSource;
+        private StockItemsDataSet2TableAdapters.StockDetailsTableAdapter stockDetailsTableAdapter;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

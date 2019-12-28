@@ -1891,7 +1891,6 @@ namespace ShopifyApp {
                 this.columnProductName.MaxLength = 50;
                 this.columnUnitPrice.AllowDBNull = false;
                 this.columnQuantity.AllowDBNull = false;
-                this.columnSupplierID.AllowDBNull = false;
                 this.columnSupplierID.MaxLength = 50;
             }
             
@@ -2645,11 +2644,28 @@ namespace ShopifyApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string SupplierID {
                 get {
-                    return ((string)(this[this.tableStockDetails.SupplierIDColumn]));
+                    try {
+                        return ((string)(this[this.tableStockDetails.SupplierIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SupplierID\' in table \'StockDetails\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStockDetails.SupplierIDColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSupplierIDNull() {
+                return this.IsNull(this.tableStockDetails.SupplierIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSupplierIDNull() {
+                this[this.tableStockDetails.SupplierIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3079,7 +3095,7 @@ SELECT CustomerID, Name, ContactNumber FROM CustomerDetails WHERE (CustomerID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString1;
+            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3435,7 +3451,7 @@ SELECT PurchaseID, TotalPrice, Date, SupplierID FROM PurchaseHistory WHERE (Purc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString1;
+            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3818,7 +3834,7 @@ SELECT SalesID, SalesDate, TransactionID, CustomerID, SalesTotal FROM Sales WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString1;
+            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4188,7 +4204,7 @@ SELECT SalesID, ProductID, UnitPrice, Quantity, Date, TotalPrice FROM SalesHisto
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString1;
+            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4520,14 +4536,13 @@ SELECT SalesID, ProductID, UnitPrice, Quantity, Date, TotalPrice FROM SalesHisto
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[StockDetails] WHERE (([ProductID] = @Original_ProductID) AND (" +
-                "[ProductName] = @Original_ProductName) AND ([UnitPrice] = @Original_UnitPrice) A" +
-                "ND ([Quantity] = @Original_Quantity) AND ([SupplierID] = @Original_SupplierID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StockDetails] WHERE (([ProductID] = @Original_ProductID) AND ([ProductName] = @Original_ProductName) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ((@IsNull_SupplierID = 1 AND [SupplierID] IS NULL) OR ([SupplierID] = @Original_SupplierID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitPrice", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitPrice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SupplierID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SupplierID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SupplierID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SupplierID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -4541,7 +4556,7 @@ SELECT ProductID, ProductName, UnitPrice, Quantity, SupplierID FROM StockDetails
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SupplierID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SupplierID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StockDetails] SET [ProductID] = @ProductID, [ProductName] = @ProductName, [UnitPrice] = @UnitPrice, [Quantity] = @Quantity, [SupplierID] = @SupplierID WHERE (([ProductID] = @Original_ProductID) AND ([ProductName] = @Original_ProductName) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ([SupplierID] = @Original_SupplierID));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StockDetails] SET [ProductID] = @ProductID, [ProductName] = @ProductName, [UnitPrice] = @UnitPrice, [Quantity] = @Quantity, [SupplierID] = @SupplierID WHERE (([ProductID] = @Original_ProductID) AND ([ProductName] = @Original_ProductName) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ((@IsNull_SupplierID = 1 AND [SupplierID] IS NULL) OR ([SupplierID] = @Original_SupplierID)));
 SELECT ProductID, ProductName, UnitPrice, Quantity, SupplierID FROM StockDetails WHERE (ProductID = @ProductID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4553,6 +4568,7 @@ SELECT ProductID, ProductName, UnitPrice, Quantity, SupplierID FROM StockDetails
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitPrice", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitPrice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SupplierID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SupplierID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SupplierID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SupplierID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -4560,7 +4576,7 @@ SELECT ProductID, ProductName, UnitPrice, Quantity, SupplierID FROM StockDetails
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString1;
+            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4647,10 +4663,12 @@ SELECT ProductID, ProductName, UnitPrice, Quantity, SupplierID FROM StockDetails
             this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_UnitPrice));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Quantity));
             if ((Original_SupplierID == null)) {
-                throw new global::System.ArgumentNullException("Original_SupplierID");
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_SupplierID));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_SupplierID));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4688,7 +4706,7 @@ SELECT ProductID, ProductName, UnitPrice, Quantity, SupplierID FROM StockDetails
             this.Adapter.InsertCommand.Parameters[2].Value = ((double)(UnitPrice));
             this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Quantity));
             if ((SupplierID == null)) {
-                throw new global::System.ArgumentNullException("SupplierID");
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(SupplierID));
@@ -4729,7 +4747,7 @@ SELECT ProductID, ProductName, UnitPrice, Quantity, SupplierID FROM StockDetails
             this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(UnitPrice));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Quantity));
             if ((SupplierID == null)) {
-                throw new global::System.ArgumentNullException("SupplierID");
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(SupplierID));
@@ -4749,10 +4767,12 @@ SELECT ProductID, ProductName, UnitPrice, Quantity, SupplierID FROM StockDetails
             this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_UnitPrice));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_Quantity));
             if ((Original_SupplierID == null)) {
-                throw new global::System.ArgumentNullException("Original_SupplierID");
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_SupplierID));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_SupplierID));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4943,7 +4963,7 @@ SELECT SupplierID, SupplierName, ContactNumber, Description FROM SupplierDetails
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString1;
+            this._connection.ConnectionString = global::ShopifyApp.Properties.Settings.Default.StockItemsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
