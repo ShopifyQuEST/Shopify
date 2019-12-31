@@ -35,56 +35,85 @@ namespace ShopifyApp.Stock_Managment
 
         }
 
+
+
+
+        //Method to insert into Stock
+
         private void btnInsertStock_Click(object sender, EventArgs e)
         {
-
 
             int output = 0;
             ShopifyItems shopifyItems = null;
             try
             {
-
-
-                shopifyItems = new ShopifyItems();
-                shopifyItems.Productid = txtProductID.Text;
-                shopifyItems.Productname =txtProductName.Text;
-                shopifyItems.Unitprice =Convert.ToInt64(txtUnitPrice.Text);
-                shopifyItems.Quantity = Convert.ToInt64(txtQuality.Text);
-                shopifyItems.Supplierid = cmbSupplierID.Text;
-                output = ShopifyItemsBLL.StockInsert(shopifyItems);
-                if (output > 0)
-
+                if (txtProductID.Text == string.Empty && txtProductName.Text == string.Empty && txtQuality.Text == string.Empty && txtUnitPrice.Text == string.Empty && cmbID.Text == string.Empty)
                 {
-                    labelMessage.Text = "successfully added";
-                    //LoadContacts();
-                    //LoadContacts();
-                    //btnsave.Text = "New";
-
-                    //btndlt.Enabled = true;
-                    //btnupdate.Enabled = true;
-                    //btnclear.Text = "CLEAR";
-
-
-
-
+                    lblMessaging.Text = "! All fields are mandatory. Enter Data to all fields";
+                    return;
                 }
+                else if (txtProductID.Text == string.Empty)
+                {
+                    lblMessaging.Text = "! Enter Product ID";
+                    return;
+                }
+                else if (txtProductName.Text == string.Empty)
+                {
+                    lblMessaging.Text = "! Enter Product Name";
+                    return;
+                }
+                else if (txtQuality.Text == string.Empty)
+                {
+                    lblMessaging.Text = "! Enter Product Quantity";
+                    return;
+                }
+                else if (txtUnitPrice.Text == string.Empty)
+                {
+                    lblMessaging.Text = "! Enter Unit Price";
+                    return;
+                }
+             
                 else
                 {
-                    labelMessage.Text = "failed to insert";
-                }
 
+
+                    shopifyItems = new ShopifyItems();
+                    shopifyItems.Productid = txtProductID.Text;
+                    shopifyItems.Productname = txtProductName.Text;
+                    shopifyItems.Unitprice = Convert.ToInt64(txtUnitPrice.Text);
+                    shopifyItems.Quantity = Convert.ToInt64(txtQuality.Text);
+                    shopifyItems.Supplierid = cmbSupplierID.Text;
+                    shopifyItems.Date = lblDate.Text;
+                    output = ShopifyItemsBLL.StockInsert(shopifyItems);
+                    if (output > 0)
+
+                    {
+                        lblMessaging.Text = "successfully added";
+                        LoadContactIDs();
+                      
+                        //btnsave.Text = "New";
+
+                        //btndlt.Enabled = true;
+                        //btnupdate.Enabled = true;
+                        //btnclear.Text = "CLEAR";
+                    }
+                    else
+                    {
+                        lblMessaging.Text = "failed to insert";
+                    }
+                }
             }
 
             catch (Exception e1)
             {
-                labelMessage.Text = e1.Message.ToString();
+                lblMessaging.Text = e1.Message.ToString();
             }
-
-
-
-
-
         }
+
+
+
+
+
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
@@ -103,29 +132,31 @@ namespace ShopifyApp.Stock_Managment
 
                 shopifyItems.Quantity = Convert.ToInt64(txtQuality.Text);
 
+                shopifyItems.Supplierid = cmbSupplierID.Text;
                 output = ShopifyItemsBLL.StockUpdate(shopifyItems);
 
 
                 if (output > 0)
 
                 {
-                    labelMessage.Text = "successfully updated";
-                    //LoadContacts();
-
+                    lblMessaging.Text = "successfully updated";
+                    LoadContactIDs();
 
                 }
                 else
                 {
-                    labelMessage.Text = "failed to update";
+                    lblMessaging.Text = "failed to update";
                 }
 
 
             }
             catch (Exception e4)
             {
-                labelMessage.Text = e4.Message.ToString();
+                lblMessaging.Text = e4.Message.ToString();
             }
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -141,19 +172,19 @@ namespace ShopifyApp.Stock_Managment
                 }
                 if (output > 0)
                 {
-                    labelMessage.Text = " details deleted succesfully";
+                    lblMessaging.Text = " details deleted succesfully";
                     //LoadContacts();
-                    //LoadContactIDs();
+                    LoadContactIDs();
 
                 }
                 else
                 {
-                    labelMessage.Text = "try again later";
+                    lblMessaging.Text = "try again later";
                 }
             }
             catch (Exception e7)
             {
-                labelMessage.Text = e7.Message.ToString();
+                lblMessaging.Text = e7.Message.ToString();
             }
 
 
@@ -188,18 +219,23 @@ namespace ShopifyApp.Stock_Managment
         private void ManageStock_Load(object sender, EventArgs e)
         {
             LoadContactIDs();
+            LoadSupplierID();
+
+            lblDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+
         }
 
 
         private void LoadContactIDs()
         {
-            DataSet dsStudentID = null;
+            DataSet dsStockID = null;
             try
             {
-                dsStudentID = ShopifyItemsBLL.GetContactIDs();
-                if (dsStudentID != null)
+                dsStockID = ShopifyItemsBLL.GetProductID();
+                if (dsStockID != null)
                 {
-                    cmbID.DataSource = dsStudentID.Tables[0];
+                    cmbID.DataSource = dsStockID.Tables[0];
 
 
                     cmbID.ValueMember = "ProductID";
@@ -218,10 +254,43 @@ namespace ShopifyApp.Stock_Managment
             }
         }
 
-      
 
 
+        private void LoadSupplierID()
+        {
+            DataSet dsStudentID = null;
+            try
+            {
+                dsStudentID = ShopifyItemsBLL.GetSupplierIDs();
+                if (dsStudentID != null)
+                {
+                    cmbSupplierID.DataSource = dsStudentID.Tables[0];
 
 
+                    cmbSupplierID.ValueMember = "SupplierID";
+                    cmbSupplierID.DisplayMember = "SupplierID";
+
+                }
+                else
+                {
+                    labelMessage.Text = "No students avialbale";
+                }
+            }
+            catch (Exception ex)
+            {
+                labelMessage.Text = ex.Message.ToString();
+
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
