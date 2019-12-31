@@ -81,61 +81,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Stock Managment\Manage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\Manage.Designer.cs">
-      <DependentUpon>Manage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\ManageStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\ManageStock.Designer.cs">
-      <DependentUpon>ManageStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\Stock Manager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\Stock Manager.Designer.cs">
-      <DependentUpon>Stock Manager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\View.Designer.cs">
-      <DependentUpon>View.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\ViewStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\ViewStock.Designer.cs">
-      <DependentUpon>ViewStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StockItemsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StockItemsDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockItemsDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StockItemsDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockItemsDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StockItemsDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockItemsDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StockItemsDataSet41.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockItemsDataSet41.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="EstablishConn1.resx">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,21 +88,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\Manage.resx">
-      <DependentUpon>Manage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\ManageStock.resx">
-      <DependentUpon>ManageStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\Stock Manager.resx">
-      <DependentUpon>Stock Manager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\View.resx">
-      <DependentUpon>View.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\ViewStock.resx">
-      <DependentUpon>ViewStock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -169,61 +99,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="StockItemsDataSet.xsc">
-      <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockItemsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockItemsDataSet.xss">
-      <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet1.xsc">
-      <DependentUpon>StockItemsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockItemsDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockItemsDataSet1.xss">
-      <DependentUpon>StockItemsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet2.xsc">
-      <DependentUpon>StockItemsDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockItemsDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockItemsDataSet2.xss">
-      <DependentUpon>StockItemsDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet3.xsc">
-      <DependentUpon>StockItemsDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockItemsDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockItemsDataSet3.xss">
-      <DependentUpon>StockItemsDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet41.xsc">
-      <DependentUpon>StockItemsDataSet41.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet41.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockItemsDataSet41.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockItemsDataSet41.xss">
-      <DependentUpon>StockItemsDataSet41.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
