@@ -21,7 +21,7 @@ namespace ShopifyApp.Stock_Managment
         private void ViewStock_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'stockItemsDataSet2.StockDetails' table. You can move, or remove it, as needed.
-            this.stockDetailsTableAdapter.Fill(this.stockItemsDataSet2.StockDetails);
+            //this.stockDetailsTableAdapter.Fill(this.stockItemsDataSet2.StockDetails);
             LoadContacts();
 
         }
