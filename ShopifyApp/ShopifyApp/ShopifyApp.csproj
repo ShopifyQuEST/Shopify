@@ -68,25 +68,38 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cashier\BillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\BillForm.Designer.cs">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\CashierMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\CashierMenu.Designer.cs">
+      <DependentUpon>CashierMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\SalesBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\SalesBilling.Designer.cs">
+      <DependentUpon>SalesBilling.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstablishConn1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EstablishConn1.Designer.cs">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\Manage.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stock Managment\Manage.Designer.cs">
-      <DependentUpon>Manage.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stock Managment\ManageStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,12 +111,6 @@
     </Compile>
     <Compile Include="Stock Managment\Stock Manager.Designer.cs">
       <DependentUpon>Stock Manager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\View.Designer.cs">
-      <DependentUpon>View.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock Managment\ViewStock.cs">
       <SubType>Form</SubType>
@@ -121,33 +128,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="StockItemsDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockItemsDataSet2.xsd</DependentUpon>
+    <Compile Include="WelcomeForm.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cashier\BillForm.resx">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\CashierMenu.resx">
+      <DependentUpon>CashierMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\SalesBilling.resx">
+      <DependentUpon>SalesBilling.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EstablishConn1.resx">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\Manage.resx">
-      <DependentUpon>Manage.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="Stock Managment\ManageStock.resx">
       <DependentUpon>ManageStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock Managment\Stock Manager.resx">
       <DependentUpon>Stock Manager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\View.resx">
-      <DependentUpon>View.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Stock Managment\ViewStock.resx">
       <DependentUpon>ViewStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -181,17 +203,6 @@
     <None Include="StockItemsDataSet1.xss">
       <DependentUpon>StockItemsDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="StockItemsDataSet2.xsc">
-      <DependentUpon>StockItemsDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="StockItemsDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockItemsDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockItemsDataSet2.xss">
-      <DependentUpon>StockItemsDataSet2.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -207,19 +218,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\maxresdefault1.jpg" />
+    <None Include="Resources\cave-johnson-supermarket-women-model-portal-2-video-games-wallpaper-preview.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\shopify_logo_white.png" />
+    <None Include="Resources\images.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo_white_shopify%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Shopify-Visa-Header.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\finalpicc.png" />
+    <None Include="Resources\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
