@@ -38,6 +38,7 @@
             // 
             // dgvSupplier
             // 
+            this.dgvSupplier.AllowUserToOrderColumns = true;
             this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSupplier.Location = new System.Drawing.Point(291, 188);
             this.dgvSupplier.Name = "dgvSupplier";

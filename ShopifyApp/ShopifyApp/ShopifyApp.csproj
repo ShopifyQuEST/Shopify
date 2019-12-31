@@ -131,6 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StockItemsDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockItemsDataSet41.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EstablishConn1.resx">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,9 +213,22 @@
     <None Include="StockItemsDataSet3.xss">
       <DependentUpon>StockItemsDataSet3.xsd</DependentUpon>
     </None>
+    <None Include="StockItemsDataSet41.xsc">
+      <DependentUpon>StockItemsDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="StockItemsDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockItemsDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StockItemsDataSet41.xss">
+      <DependentUpon>StockItemsDataSet41.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopifyBLL\ShopifyBLL.csproj">
