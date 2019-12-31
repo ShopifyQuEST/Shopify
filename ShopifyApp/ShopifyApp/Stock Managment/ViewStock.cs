@@ -61,10 +61,5 @@ namespace ShopifyApp.Stock_Managment
         {
 
         }
-
-        private void dgvView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

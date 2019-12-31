@@ -13,10 +13,6 @@ namespace ShopifyBLL.ShopifyBL
    public class ShopifyItemsBLL
     {
 
-
-
-        //Method for stock insert in BLL
-
         public static int StockInsert(ShopifyItems shopifyItems)
         {
             int output = 0;
@@ -28,12 +24,15 @@ namespace ShopifyBLL.ShopifyBL
 
             catch (Exception e3)
             {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs :StockInsert()" + e3.Message.ToString());
+                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs " + e3.Message.ToString());
             }
+
+
             return output;
+
+
+
         }
-
-
 
 
 
@@ -53,7 +52,7 @@ namespace ShopifyBLL.ShopifyBL
             }
             catch (Exception e3)
             {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs:StockUpdate" + e3.Message.ToString());
+                Console.Out.WriteLine(" inside catch-ERROR : stdent_mark_Bl.cs:StudentMarkupdate" + e3.Message.ToString());
 
 
             }
@@ -61,33 +60,6 @@ namespace ShopifyBLL.ShopifyBL
             return output;
         }
 
-
-        //update supplier
-
-
-        public static int SupplierUpdate(SupplierData supplierData)
-        {
-            int output = 0;
-
-
-            try
-            {
-
-
-                output = ShopifyItemsDSL.SupplierUpdate(supplierData);
-                ////////////
-
-
-            }
-            catch (Exception e3)
-            {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs:SupplierUpdate()" + e3.Message.ToString());
-
-
-            }
-
-            return output;
-        }
 
 
 
@@ -104,7 +76,7 @@ namespace ShopifyBLL.ShopifyBL
             }
             catch (Exception e3)
             {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs: GetByID()" + e3.Message.ToString());
+                Console.Out.WriteLine(" inside catch-ERROR : student_.cs " + e3.Message.ToString());
 
 
             }
@@ -112,83 +84,28 @@ namespace ShopifyBLL.ShopifyBL
             return shopifyItems;
         }
 
-
-        //BLL search 
-
-        public static SupplierData GetBySupplierID(string supplierid)
-        {
-
-            SupplierData supplierData = null;
-
-            try
-            {
-
-                supplierData = ShopifyItemsDSL.GetBySupplierID(supplierid);
-
-            }
-            catch (Exception e3)
-            {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs :GetBySupplierID()" + e3.Message.ToString());
-
-
-            }
-
-            return supplierData;
-        }
-
-
-
-        public static DataSet GetProductID()
+        public static DataSet GetContactIDs()
         {
             //String sql = "";
 
-            DataSet dsStockID = null;
+            DataSet dsSTudents = null;
 
             try
             {
 
-                dsStockID = ShopifyItemsDSL.GetProductID();
+                dsSTudents = ShopifyItemsDSL.GetContactIDs();
 
 
             }
             catch (Exception e3)
             {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs :GetContactIDs" + e3.Message.ToString());
+                Console.Out.WriteLine(" inside catch-ERROR : student_BL.cs " + e3.Message.ToString());
 
 
             }
 
-            return dsStockID;
+            return dsSTudents;
         }
-
-        //Get supplier id in combo box
-
-        public static DataSet GetSupplierIDs()
-        {
-            //String sql = "";
-
-            DataSet dsSuppliers = null;
-
-            try
-            {
-
-                dsSuppliers = ShopifyItemsDSL.GetSupplierIDs();
-
-
-            }
-            catch (Exception e3)
-            {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs :GetSupplierIDs()" + e3.Message.ToString());
-
-
-            }
-
-            return dsSuppliers;
-        }
-
-
-
-
 
 
 
@@ -205,37 +122,13 @@ namespace ShopifyBLL.ShopifyBL
             }
             catch (Exception e3)
             {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs :DeleteItem()" + e3.Message.ToString());
+                Console.Out.WriteLine(" inside catch-ERROR : student_DAO.cs " + e3.Message.ToString());
 
 
             }
 
             return output;
         }
-
-
-
-        public static int DeletingItem(string id)
-        {
-            int output = 0;
-
-            try
-            {
-                output = ShopifyItemsDSL.DeletingItem(id);
-
-
-
-            }
-            catch (Exception e3)
-            {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs: DeletingItem()" + e3.Message.ToString());
-
-
-            }
-
-            return output;
-        }
-
 
 
 
@@ -255,66 +148,13 @@ namespace ShopifyBLL.ShopifyBL
             }
             catch (Exception e3)
             {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs :GetDetails()" + e3.Message.ToString());
+                Console.Out.WriteLine(" inside catch-ERROR : ShopifyBLL.cs :GetDetails()" + e3.Message.ToString());
 
 
             }
 
             return dsSTudents;
         }
-
-
-
-
-
-
-
-        public static int SupplierAdd(SupplierData supplierData)
-        {
-            int output = 0;
-
-            try
-            {
-                output = ShopifyItemsDSL.SupplierAdd(supplierData);
-            }
-
-            catch (Exception e3)
-            {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs:SupplierAdd() " + e3.Message.ToString());
-            }
-
-
-            return output;
-
-
-        }
-
-
-        public static DataSet GetSupplierDetails()
-        {
-            //String sql = "";
-
-            DataSet dsSuppliers = null;
-
-            try
-            {
-
-                dsSuppliers = ShopifyItemsDSL.GetSupplierDetails();
-
-
-            }
-            catch (Exception e3)
-            {
-                Console.Out.WriteLine(" inside catch-ERROR : ShopifyItemsBLL.cs :GetSupplierDetails()" + e3.Message.ToString());
-
-
-            }
-
-            return dsSuppliers;
-        }
-
-
-
 
     }
 }

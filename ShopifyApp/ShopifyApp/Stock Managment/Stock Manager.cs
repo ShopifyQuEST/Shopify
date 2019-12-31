@@ -43,23 +43,11 @@ namespace ShopifyApp.Stock_Managment
 
         }
 
-        private void supplierDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void manageSupplier_Click(object sender, EventArgs e)
-        {
-            Manage manage = new Manage();
-            manage.Show();
-            manage.MdiParent = this;
-        }
 
-        private void viewSupplier_Click(object sender, EventArgs e)
-        {
-            View view = new View();
-            view.Show();
-            view.MdiParent = this;
-        }
+
+
+
     }
 }
