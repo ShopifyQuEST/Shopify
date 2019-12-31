@@ -76,24 +76,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stock Managment\ManageStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\ManageStock.Designer.cs">
-      <DependentUpon>ManageStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\Stock Manager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\Stock Manager.Designer.cs">
-      <DependentUpon>Stock Manager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\ViewStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\ViewStock.Designer.cs">
-      <DependentUpon>ViewStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="StockItemsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +91,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StockItemsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockItemsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockItemsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockItemsDataSet4.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EstablishConn1.resx">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,15 +114,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Stock Managment\ManageStock.resx">
-      <DependentUpon>ManageStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\Stock Manager.resx">
-      <DependentUpon>Stock Manager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\ViewStock.resx">
-      <DependentUpon>ViewStock.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -173,6 +156,28 @@
     </None>
     <None Include="StockItemsDataSet2.xss">
       <DependentUpon>StockItemsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="StockItemsDataSet3.xsc">
+      <DependentUpon>StockItemsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="StockItemsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockItemsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StockItemsDataSet3.xss">
+      <DependentUpon>StockItemsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="StockItemsDataSet4.xsc">
+      <DependentUpon>StockItemsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="StockItemsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockItemsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StockItemsDataSet4.xss">
+      <DependentUpon>StockItemsDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
