@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvView = new System.Windows.Forms.DataGridView();
-            //this.stockItemsDataSet2 = new ShopifyApp.StockItemsDataSet2();
+            this.stockItemsDataSet2 = new ShopifyApp.StockItemsDataSet2();
             this.stockDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.stockDetailsTableAdapter = new ShopifyApp.StockItemsDataSet2TableAdapters.StockDetailsTableAdapter();
+            this.stockDetailsTableAdapter = new ShopifyApp.StockItemsDataSet2TableAdapters.StockDetailsTableAdapter();
             this.lblMessage = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -127,9 +127,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvView;
-       // private StockItemsDataSet2 stockItemsDataSet2;
+        private StockItemsDataSet2 stockItemsDataSet2;
         private System.Windows.Forms.BindingSource stockDetailsBindingSource;
-       // private StockItemsDataSet2TableAdapters.StockDetailsTableAdapter stockDetailsTableAdapter;
+        private StockItemsDataSet2TableAdapters.StockDetailsTableAdapter stockDetailsTableAdapter;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
