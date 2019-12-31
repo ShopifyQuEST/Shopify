@@ -1,0 +1,1 @@
+﻿Select SUM(TotalPrice) from SalesHistory where SalesID = '110'
