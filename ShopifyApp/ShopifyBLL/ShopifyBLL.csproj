@@ -68,6 +68,7 @@
     <Compile Include="praseethatextClass2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShopifyBL\ShopifyItemsBLL.cs" />
+    <Compile Include="ShopifyBL\ShopifySalesBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopifyDSL\ShopifyDSL.csproj">

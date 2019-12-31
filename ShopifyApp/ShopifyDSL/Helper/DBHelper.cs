@@ -16,8 +16,7 @@ namespace ShopifyDSL.Helper
 
             try
             {
-
-                String connectionstring = ConfigurationManager.ConnectionStrings["ShopifyApp.Properties.Settings.StockItemsConnectionString"].ConnectionString;
+                String connectionstring = ConfigurationManager.ConnectionStrings["ShopifyApp.Properties.Settings.StockItemsConnectionString1"].ConnectionString;
 
                 con = new SqlConnection(connectionstring); //connection with db
             }
