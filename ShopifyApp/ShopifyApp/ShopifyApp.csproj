@@ -75,9 +75,7 @@
     <Compile Include="EstablishConn1.Designer.cs">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="LoginForm.cs" />
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
@@ -106,9 +104,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="WelcomeForm.cs" />
     <Compile Include="WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
