@@ -81,7 +81,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Data\DBConnection.cs" />
-    <Compile Include="DL\ShopifyItemsDSL.cs" />
+    <Compile Include="DL\ShopifySaleDSL.cs" />
     <Compile Include="Helper\DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

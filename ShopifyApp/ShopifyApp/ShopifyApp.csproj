@@ -68,51 +68,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cashier\TestClass1.cs" />
     <Compile Include="EstablishConn1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EstablishConn1.Designer.cs">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs" />
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stock Managment\ManageStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\ManageStock.Designer.cs">
-      <DependentUpon>ManageStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\Stock Manager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\Stock Manager.Designer.cs">
-      <DependentUpon>Stock Manager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock Managment\ViewStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock Managment\ViewStock.Designer.cs">
-      <DependentUpon>ViewStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="StockItemsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeForm.cs" />
-    <Compile Include="WelcomeForm.Designer.cs">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="EstablishConn1.resx">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,15 +94,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Stock Managment\ManageStock.resx">
-      <DependentUpon>ManageStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock Managment\Stock Manager.resx">
-      <DependentUpon>Stock Manager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeForm.resx">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
