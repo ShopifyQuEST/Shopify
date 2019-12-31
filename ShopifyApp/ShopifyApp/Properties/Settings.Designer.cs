@@ -34,5 +34,16 @@ namespace ShopifyApp.Properties {
                 return ((string)(this["StockItemsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\1028260\\Desktop\\AJMA" +
+            "L\\Shopify\\ShopifyApp\\ShopifyDSL\\Data\\StockItems.mdf;Integrated Security=True")]
+        public string StockItemsConnectionString1 {
+            get {
+                return ((string)(this["StockItemsConnectionString1"]));
+            }
+        }
     }
 }
