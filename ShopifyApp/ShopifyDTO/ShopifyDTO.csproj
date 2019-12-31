@@ -66,7 +66,6 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DTO\ShopifyItems.cs" />
-    <Compile Include="DTO\UtilityHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
