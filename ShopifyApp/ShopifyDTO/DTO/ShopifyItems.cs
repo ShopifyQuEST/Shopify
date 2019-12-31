@@ -63,6 +63,48 @@ namespace ShopifyDTO.DTO
             }
         }
 
+        //---------------------------------------
+
+
+
+        private string salesid;
+        public String Salesid
+        {
+            get { return salesid; }
+            set
+            {
+                salesid = value;
+            }
+        }
+
+        private double total;
+        public double Total
+        {
+            get { return total; }
+            set
+            {
+                total = value;
+            }
+        }
+
+        private double totalSale;
+        public double TotalSale
+        {
+            get { return totalSale; }
+            set
+            {
+                totalSale = value;
+            }
+        }
+
+
+
+        private string salesdate;
+        public string Salesdate
+        {
+            get { return salesdate; }
+            set { salesdate = value; }
+        }
 
 
 

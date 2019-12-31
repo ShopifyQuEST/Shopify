@@ -181,7 +181,7 @@ namespace ShopifyApp.Cashier
 
         private void btnsubmit_Click(object sender, EventArgs e)
         {
-            ShopifyItems shopifyItems = null;m
+            ShopifyItems shopifyItems = null;
             int output = 0;
             try
             {

@@ -92,12 +92,6 @@
     <Compile Include="EstablishConn1.Designer.cs">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stock Managment\ManageStock.cs">
@@ -128,12 +122,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockItemsDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WelcomeForm.Designer.cs">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Cashier\BillForm.resx">
       <DependentUpon>BillForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,9 +133,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EstablishConn1.resx">
       <DependentUpon>EstablishConn1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -167,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stock Managment\ViewStock.resx">
       <DependentUpon>ViewStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeForm.resx">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
